@@ -33,4 +33,26 @@ vacio = {}
 vacio['id'] = 89
 vacio['nombre'] = "Levi"
 vacio['favoritos'] = ['tocino', 'mazapan', 'conchas', 'malteadas']
+vacio[7548] = "mocos"
 print(vacio)
+
+### Ciclos del for
+# Recorriendo la lista 'numeros'
+for numero in numeros:
+    print(numero)
+
+for llave, valor in vacio.items():
+    print(str(llave) + ": " + str(valor))
+
+for i in range(1, 10, 2):
+    print("valor de i: " + str(i))
+
+for i in range(0, 1000, 12):
+    print("nuevo valor de i: " + str(i))
+
+### Ciclo con while
+i = 0
+while i < 1000:
+    print("i en while: " + str(i))
+    i = i + 1
+# while funciona exactamente igual que en C, C++, Java o C#
