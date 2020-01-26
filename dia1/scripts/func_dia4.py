@@ -18,9 +18,20 @@ def betterCsv(archivo):
 
 
 def naiveWriteCsv(registros):
-    f = open("registros.csv", "wt")
+    f = open("registros1.csv", "wt")
     for registro in registros:
         f.write(",".join(registro) + '\n')
     f.close()
+    print("naiveWriteCsv: Archivo csv generado!")
 
+
+def betterWriteCsv(registros):
+    with open("registros2.csv", "wt") as archivo:
+        writer = csv.writer(archivo, delimiter='#')
+        for registro in registros:
+            writer.writerow(registro)
+    print("betterWriteCsv: Archivo csv generado!")
+
+
+# mocos
 

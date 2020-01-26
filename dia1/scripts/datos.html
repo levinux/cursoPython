@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Datos en JSON</title>
+	</head>
+	<body>
+		<ol id="ldatos"></ol>
+		<script src="datos.js"></script>
+		<script type="text/javascript">
+			var comidas = "";
+			var lista = document.getElementById("ldatos");
+			lista.innerHTML += "<li>Nombre: " + datos.nombre + "</li>";
+			lista.innerHTML += "<li>Edad: " + datos.edad + "</li>";
+			datos.comidas.forEach((i) => {
+				comidas += "<li>" + i + "</li>";
+			});
+			lista.innerHTML += "<li>Comidas favoritas:<ul>" + comidas + "</ul></li>";
+		</script>
+		<p>Datos generados en Python (dia4-03.py), exportados en formato JSON (datos.js) y procesados con JavaScript/HTML (datos.html). Para ver como furula, vea el codigo fuente de estos archivos...</p>
+	</body>
+</html>
